@@ -1,7 +1,7 @@
 import pandas as pd
 from src.services.settingsService import SettingsService
-from src.services.PersonIngest import PersonIngest
-from src.services.MysqlDatabase import MysqlDatabase
+from DAO.PersonDAO import PersonDAO
+from DAO.MysqlDatabase import MysqlDatabase
 
 class Person():
 
@@ -24,8 +24,8 @@ class Person():
 
             for index, row in df.iterrows():
                 print(row['ModifiedDate'])                
-                person = PersonIngest(row,connection)
-                sql = person.insert()
+                person = PersonDAO(row,connection)
+                person.insert()
 
         except Exception as ex:
             print('Erro na Leitura de Person')

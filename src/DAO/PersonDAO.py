@@ -1,13 +1,13 @@
-from src.services.coreIngestService import CoreIngest
-from src.services.MysqlDatabase import MysqlDatabase
+from validators.coreValidator import CoreValidator
+from DAO.MysqlDatabase import MysqlDatabase
 
 
-class PersonIngest():
+class PersonDAO():
 
     def __init__(self,valores, conexao):
          self._tabela = 'person.person'
          self._valores = valores
-         self.coreIngest = CoreIngest()
+         self.coreIngest = CoreValidator()
          self._conexao = conexao
 
     def insert(self):

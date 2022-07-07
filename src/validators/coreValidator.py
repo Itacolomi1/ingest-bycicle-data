@@ -1,4 +1,4 @@
-class CoreIngest():            
+class CoreValidator():            
         
     
     def validateINT(self, field):
