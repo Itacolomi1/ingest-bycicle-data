@@ -1,3 +1,4 @@
+import math
 class CoreValidator():            
         
     
@@ -9,4 +10,16 @@ class CoreValidator():
     
     def stringField(sel, field):
         return "'" + str(field) + "'"
+    
+    def validateFloat(self,field):
+        try:
+            l = float(field)
+            if(math.isnan(l)):
+                return 0
+            else:
+                return l
+
+        except Exception as ex:
+            return 0
+        
     
