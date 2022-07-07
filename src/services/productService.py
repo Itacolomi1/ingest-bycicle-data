@@ -24,6 +24,7 @@ class Product():
                 df = pd.read_csv(path, sep=';')         
                 # print(df.columns)
                 print(df.info())
+                self._folderService.moveToDoing()
 
                 mysql = MysqlDatabase()
                 connection = mysql.connect()
@@ -32,6 +33,9 @@ class Product():
                     # print(row)                
                     product = ProductDAO(row,connection)
                     product.insert()
+                
+                self._folderService.moveToDone()
+                
                    
             else:
                 print('Não existe arquivo Product para ser processado')
