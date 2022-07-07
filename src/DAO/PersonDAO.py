@@ -1,5 +1,5 @@
-from validators.coreValidator import CoreValidator
-from DAO.MysqlDatabase import MysqlDatabase
+from src.validators.coreValidator import CoreValidator
+from src.DAO.MysqlDatabase import MysqlDatabase
 
 
 class PersonDAO():
@@ -45,14 +45,14 @@ class PersonDAO():
                      '''
 
    
+            print(query)
+            # cursor = self._conexao.cursor()
 
-            cursor = self._conexao.cursor()
-
-            cursor.execute(query)
-            self._conexao.commit()
-            print(cursor.rowcount, "Record inserted successfully into person.person table")
-            cursor.close()
-            return True
+            # cursor.execute(query)
+            # self._conexao.commit()
+            # print(cursor.rowcount, "Record inserted successfully into person.person table")
+            # cursor.close()
+            # return True
 
         except Exception as ex:
             print(ex)

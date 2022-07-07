@@ -1,4 +1,7 @@
 from src.services.productService import Product
+from src.services.customerService import Customer
+from src.services.personService import Person
+
 
 class CronJobController:
 
@@ -12,5 +15,12 @@ class CronJobController:
         #     print(0)
         
 
-        product = Product()
-        product.load()
+        # product = Product()
+        # product.load()
+
+
+        customer = Customer()
+        customer.load()
+
+        # person = Person()
+        # person.load()
