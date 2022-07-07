@@ -17,6 +17,7 @@ class SettingsService():
             self._properties['database'] = data.get('database')
             self._properties['user'] = data.get('user')
             self._properties['password'] = data.get('password')
+            self._properties['bucketPath'] = data.get('bucketPath')
 
 
     @property
