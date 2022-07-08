@@ -4,6 +4,7 @@ from src.services.personService import Person
 from src.services.specialOfferProductService import SpecialOfferProduct
 from src.services.salesOrderDetailService import SalesOrderDetail
 from src.services.salesOrderHeaderService import SalesOrderHeader
+from src.services.productService import Product
 
 
 class CronJobController:
@@ -12,25 +13,20 @@ class CronJobController:
     def start(self):
         print('---------Início CronJob---------')
 
-        # try:
-        #     print(int('NaN'))
-        # except Exception as ex:
-        #     print(0)        
+        person = Person()
+        person.load()
 
-        # product = Product()
-        # product.load()
+        product = Product()
+        product.load()
 
-        # customer = Customer()
-        # customer.load()
+        customer = Customer()
+        customer.load()
 
-        # person = Person()
-        # person.load()
+        Sproduct = SpecialOfferProduct()
+        Sproduct.load()
 
-        # Sproduct = SpecialOfferProduct()
-        # Sproduct.load()
+        salesOrderHeader = SalesOrderHeader()
+        salesOrderHeader.load()
 
         salesOrder = SalesOrderDetail()
         salesOrder.load()
-
-        # salesOrderHeader = SalesOrderHeader()
-        # salesOrderHeader.load()
