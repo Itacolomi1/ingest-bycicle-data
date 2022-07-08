@@ -39,7 +39,9 @@ Antes de executar o projeto é necessário prepara o ambiente
 
 ## Step 1 - Criação do Bucket
 
-Crie uma pasta em seu computador com o nome **bucket**, dentro dessa pasta crie as seguintes pastas: **ToDo**, **Doing**, **Done**
+Crie uma pasta em seu computador com o nome **bucket**, dentro dessa pasta crie as seguintes pastas: **ToDo**, **Doing**, **Done**.
+
+Os arquivos a serem ingeridos estão na pasta /documentos/dados desse projeto
 
 ## Step 2 - Instalação das Dependências 
 
